@@ -18,10 +18,10 @@
 let body = $response.body;
 try {
     let obj = JSON.parse(body);
-    obj.membershipType = "pro_trial";
+    obj.membershipType = "pro";
     obj.trialEligible = true;
     obj.trialWasCancelled = false
-    obj.individualMembershipType = "pro_trial"
+    obj.individualMembershipType = "pro"
     obj.daysRemainingOnTrial = 14
     $done({body: JSON.stringify(obj)});
 } catch (e) {
