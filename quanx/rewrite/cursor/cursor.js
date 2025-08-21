@@ -1,28 +1,45 @@
 /*
+// 不可以试用
 {
   "teamMembershipType" : null,
-  "trialEligible" : true, //试用资格
+  "trialEligible" : true,
   "customerBalance" : null,
-  "membershipType" : "free", //核心会员状态，可能 free/pro/pro_trial
+  "membershipType" : "free",
   "paymentId" : "cus_Srb9DQSFTMzWTd",
   "isTeamMember" : false,
   "isOnStudentPlan" : false,
-  "individualMembershipType" : "free", // 个人订阅类型
-  "trialWasCancelled" : false, // 试用是否被取消
+  "individualMembershipType" : "free",
+  "trialWasCancelled" : false,
   "verifiedStudent" : false
 }
 
-{"membershipType":"free_trial","daysRemainingOnTrial":6,"verifiedStudent":false,"trialEligible":false,"isOnStudentPlan":false,"customerBalance":null}
+// 可以试用
+{
+  "teamMembershipType" : null,
+  "trialEligible" : false,
+  "customerBalance" : null,
+  "membershipType" : "free_trial",
+  "paymentId" : "cus_SrjLGh73TumuyD"
+  "isTeamMember" : false,
+  "isOnStudentPlan" : false,
+  "individualMembershipType" : "free_trial",
+  "trialWasCancelled" : false,
+  "verifiedStudent" : false,
+  "daysRemainingOnTrial" : 14,
+  "subscriptionStatus" : "trialing",
+}
 */
 
 let body = $response.body;
 try {
     let obj = JSON.parse(body);
-    obj.membershipType = "pro";
-    obj.trialEligible = true;
+    obj.membershipType = "free_trial";
+    obj.paymentId = "cus_SrjLGh73TumuyD";
+    obj.trialEligible = false;
     obj.trialWasCancelled = false
-    obj.individualMembershipType = "pro"
+    obj.individualMembershipType = "free_trial"
     obj.daysRemainingOnTrial = 14
+    obj.subscriptionStatus = "trialing"
     $done({body: JSON.stringify(obj)});
 } catch (e) {
     $done({body});
