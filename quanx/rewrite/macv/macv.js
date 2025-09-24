@@ -168,21 +168,21 @@ let jsonBody = JSON.parse(body);
 
 try {
     jsonBody.data.vip_name = "终身会员";
+    jsonBody.data.vip = 2;
     jsonBody.data.id = 198041
     jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.verify_d = true;
     jsonBody.data.overduedate = "2099-09-09";
-    jsonBody.data.vip = 2;
     jsonBody.data.is_sign = 1;
     jsonBody.data.point = 1000;
     jsonBody.data.prize_info = [];
-    jsonBody.data.coupon = {};
     jsonBody.data.favorite_pic_id = [];
     jsonBody.data.favorite_update_data = [];
-    jsonBody.data.is_coupon = 0;
 } catch (error) {
     jsonBody.data.vip_name = "终身会员";
     jsonBody.data.id = 198041
     jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.verify_d = true;
     jsonBody.data.overduedate = "2099-09-09";
     jsonBody.data.vip = 2;
     jsonBody.data.point = 1000;
