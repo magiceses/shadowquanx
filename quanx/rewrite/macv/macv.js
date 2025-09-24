@@ -168,7 +168,9 @@ let jsonBody = JSON.parse(body);
 
 try {
     jsonBody.data.vip_name = "终身会员";
-    jsonBody.data.vip = 11;
+    jsonBody.data.id = 198041
+    jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.vip = 2;
     jsonBody.data.is_sign = 1;
     jsonBody.data.point = 1000;
     jsonBody.data.prize_info = [];
@@ -178,7 +180,9 @@ try {
     jsonBody.data.is_coupon = 0;
 } catch (error) {
     jsonBody.data.vip_name = "终身会员";
-    jsonBody.data.vip = 11;
+    jsonBody.data.id = 198041
+    jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.vip = 2;
     jsonBody.data.point = 1000;
     console.log(error);
     $done({ body: body });
