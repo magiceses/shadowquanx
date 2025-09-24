@@ -170,6 +170,7 @@ try {
     jsonBody.data.vip_name = "终身会员";
     jsonBody.data.id = 198041
     jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.overduedate = "2099-09-09";
     jsonBody.data.vip = 2;
     jsonBody.data.is_sign = 1;
     jsonBody.data.point = 1000;
@@ -182,6 +183,7 @@ try {
     jsonBody.data.vip_name = "终身会员";
     jsonBody.data.id = 198041
     jsonBody.data.nickname = "加菲猫锐";
+    jsonBody.data.overduedate = "2099-09-09";
     jsonBody.data.vip = 2;
     jsonBody.data.point = 1000;
     console.log(error);
