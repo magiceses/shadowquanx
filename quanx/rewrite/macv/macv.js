@@ -177,6 +177,8 @@ try {
     jsonBody.data.favorite_update_data = [];
     jsonBody.data.is_coupon = 0;
 } catch (error) {
+    jsonBody.data.vip_name = "终身会员";
+    jsonBody.data.vip = 1;
     console.log(error);
     $done({ body: body });
     return;
