@@ -167,7 +167,7 @@ let body = $response.body;
 let jsonBody = JSON.parse(body);
 
 try {
-    jsonBody.data.vip_name = "VIP会员";
+    jsonBody.data.vip_name = "终身会员";
     jsonBody.data.vip = 1;
     jsonBody.data.overduedate = "2099-09-09";
     jsonBody.data.is_sign = 1;
